@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/jakob/projects/learning_C/learning_C'
+make: Leaving directory '/home/jakob/projects/learning_C/learning_C'
+ 
+make: *** No targets.  Stop.
+
