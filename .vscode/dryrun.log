@@ -1,6 +1,29 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/jakob/projects/learning_C/learning_C'
+ 
+mkdir -p build/./src/helloWorld/
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/helloWorld/helloWorld.c -o build/./src/helloWorld/helloWorld.c.o
+ 
+mkdir -p build/./src/Chapter_1/1.10/
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/Chapter_1/1.10/1_10.c -o build/./src/Chapter_1/1.10/1_10.c.o
+ 
+mkdir -p build/./src/Chapter_1/1.1/
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/Chapter_1/1.1/1_1.c -o build/./src/Chapter_1/1.1/1_1.c.o
+ 
+mkdir -p build/./src/Chapter_1/1.6/
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/Chapter_1/1.6/1_6.c -o build/./src/Chapter_1/1.6/1_6.c.o
+ 
+mkdir -p build/./src/Chapter_1/1.9/
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/Chapter_1/1.9/1_9.c -o build/./src/Chapter_1/1.9/1_9.c.o
+mkdir -p build/./src/Chapter_1/1.2/
+ 
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/Chapter_1/1.2/1_2.c -o build/./src/Chapter_1/1.2/1_2.c.o
+ 
+mkdir -p build/./src/Chapter_1/1.4/
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/Chapter_1/1.4/1_4.c -o build/./src/Chapter_1/1.4/1_4.c.o
+ 
+mkdir -p build/./src/
+gcc -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP  -c src/main.c -o build/./src/main.c.o
+gcc ./build/./src/helloWorld/helloWorld.c.o ./build/./src/Chapter_1/1.10/1_10.c.o ./build/./src/Chapter_1/1.1/1_1.c.o ./build/./src/Chapter_1/1.6/1_6.c.o ./build/./src/Chapter_1/1.9/1_9.c.o ./build/./src/Chapter_1/1.2/1_2.c.o ./build/./src/Chapter_1/1.4/1_4.c.o ./build/./src/main.c.o -o build/learning_C  -lncurses
 make: Leaving directory '/home/jakob/projects/learning_C/learning_C'
  
-make: *** No targets.  Stop.
-

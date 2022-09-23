@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 24 13:08:26 2022
+# Make data base, printed on Fri Sep 23 19:44:12 2022
 
 # Variables
 
@@ -19,11 +21,13 @@ GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
 LC_NAME = de_AT.UTF-8
 # environment
 LC_NUMERIC = de_AT.UTF-8
 # environment
-VSCODE_CWD = /home/jakob/Downloads
+VSCODE_CWD = /home/jakob
 # environment
 LC_ADDRESS = de_AT.UTF-8
 # default
@@ -34,6 +38,8 @@ QT_ACCESSIBILITY = 1
 @D = $(patsubst %/,%,$(dir $@))
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# makefile (from 'Makefile', line 24)
+INC_FLAGS := -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4
 # default
 .VARIABLES := 
 # environment
@@ -42,8 +48,6 @@ PWD = /home/jakob/projects/learning_C/learning_C
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-OLDPWD = /home/jakob
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -53,21 +57,21 @@ VSCODE_CODE_CACHE_PATH = /home/jakob/.config/Code/CachedData/3b889b090b5ad5793f5
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.4IJMP1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.5THGS1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
-# environment
-GNOME_TERMINAL_SERVICE = :1.110
 # makefile
 MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/jakob/projects/learning_C/learning_C
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from 'Makefile', line 11)
+SRCS := ./src/helloWorld/helloWorld.c ./src/Chapter_1/1.10/1_10.c ./src/Chapter_1/1.1/1_1.c ./src/Chapter_1/1.6/1_6.c ./src/Chapter_1/1.9/1_9.c ./src/Chapter_1/1.2/1_2.c ./src/Chapter_1/1.4/1_4.c ./src/main.c
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -84,18 +88,18 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 +D = $(patsubst %/,%,$(dir $+))
 # environment
 XDG_SESSION_DESKTOP = ubuntu
-# makefile (from 'Makefile', line 1)
-MAKEFILE_LIST := Makefile
+# makefile (from 'build/./src/main.c.d', line 1)
+MAKEFILE_LIST := Makefile build/./src/helloWorld/helloWorld.c.d build/./src/Chapter_1/1.10/1_10.c.d build/./src/Chapter_1/1.1/1_1.c.d build/./src/Chapter_1/1.6/1_6.c.d build/./src/Chapter_1/1.9/1_9.c.d build/./src/Chapter_1/1.2/1_2.c.d build/./src/Chapter_1/1.4/1_4.c.d build/./src/main.c.d
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 9640
+VSCODE_PID = 2489
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/Ubuntu:@/tmp/.ICE-unix/1225,unix/Ubuntu:/tmp/.ICE-unix/1225
+SESSION_MANAGER = local/Ubuntu:@/tmp/.ICE-unix/1252,unix/Ubuntu:/tmp/.ICE-unix/1252
 # automatic
 *F = $(notdir $*)
 # environment
@@ -108,6 +112,8 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 15)
+OBJS := ./build/./src/helloWorld/helloWorld.c.o ./build/./src/Chapter_1/1.10/1_10.c.o ./build/./src/Chapter_1/1.1/1_1.c.o ./build/./src/Chapter_1/1.6/1_6.c.o ./build/./src/Chapter_1/1.9/1_9.c.o ./build/./src/Chapter_1/1.2/1_2.c.o ./build/./src/Chapter_1/1.4/1_4.c.o ./build/./src/main.c.o
 # environment
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # makefile
@@ -117,11 +123,15 @@ MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
 # environment
-SHLVL = 1
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/1e11d75c_dcde_410b_bb83_935474279f9f
+SHLVL = 0
+# makefile (from 'Makefile', line 7)
+SRC_DIRS := ./src
 # environment
 MAKELEVEL := 0
+# environment
+IM_CONFIG_CHECK_ENV = 1
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
@@ -137,6 +147,8 @@ LC_MONETARY = de_AT.UTF-8
 # environment
 LC_TIME = de_AT.UTF-8
 # environment
+INVOCATION_ID = fbbe4e3bc1854a2eb0e7834e9d83f513
+# environment
 USERNAME = jakob
 # environment
 GNOME_SETUP_DISPLAY = :1
@@ -149,7 +161,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LS_COLORS = 
 # automatic
 +F = $(notdir $+)
 # environment
@@ -160,10 +172,14 @@ ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = jakob
-# makefile
-.DEFAULT_GOAL := 
+# makefile (from 'Makefile', line 28)
+CPPFLAGS := -I./src -I./src/helloWorld -I./src/Chapter_1 -I./src/Chapter_1/1.10 -I./src/Chapter_1/1.3 -I./src/Chapter_1/1.1 -I./src/Chapter_1/1.6 -I./src/Chapter_1/1.8 -I./src/Chapter_1/1.5 -I./src/Chapter_1/1.9 -I./src/Chapter_1/1.7 -I./src/Chapter_1/1.2 -I./src/Chapter_1/1.4 -MMD -MP
 # environment
-SYSTEMD_EXEC_PID = 1249
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile
+.DEFAULT_GOAL := build/learning_C
+# environment
+SYSTEMD_EXEC_PID = 1275
 # environment
 DISPLAY = :0
 # environment
@@ -172,20 +188,30 @@ USER = jakob
 GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# environment
+MANAGERPID = 1054
 # environment
 LC_MEASUREMENT = de_AT.UTF-8
 # environment
-_ = /usr/bin/code
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2489
+# environment
+_ = /usr/share/code/code
 # environment
 LC_PAPER = de_AT.UTF-8
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 2)
+TARGET_EXEC := learning_C
 # environment
-COLORTERM = truecolor
+JOURNAL_STREAM = 8:43126
 # environment
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from 'Makefile', line 6)
+BUILD_DIR := ./build
 # environment
 HOME = /home/jakob
 # environment
@@ -195,23 +221,21 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-4a0e5392-1.69.2-main.sock
 # environment
-TERM = xterm-256color
-# environment
 IM_CONFIG_PHASE = 1
+# makefile (from 'Makefile', line 22)
+INC_DIRS := ./src ./src/helloWorld ./src/Chapter_1 ./src/Chapter_1/1.10 ./src/Chapter_1/1.3 ./src/Chapter_1/1.1 ./src/Chapter_1/1.6 ./src/Chapter_1/1.8 ./src/Chapter_1/1.5 ./src/Chapter_1/1.9 ./src/Chapter_1/1.7 ./src/Chapter_1/1.2 ./src/Chapter_1/1.4
 # default
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
+# makefile (from 'Makefile', line 19)
+DEPS := ./build/./src/helloWorld/helloWorld.c.d ./build/./src/Chapter_1/1.10/1_10.c.d ./build/./src/Chapter_1/1.1/1_1.c.d ./build/./src/Chapter_1/1.6/1_6.c.d ./build/./src/Chapter_1/1.9/1_9.c.d ./build/./src/Chapter_1/1.2/1_2.c.d ./build/./src/Chapter_1/1.4/1_4.c.d ./build/./src/main.c.d
 # default
 SUFFIXES := 
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-VTE_VERSION = 6800
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 4)
+CC := gcc
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -219,7 +243,7 @@ GDMSESSION = ubuntu
 # environment
 LC_IDENTIFICATION = de_AT.UTF-8
 # variable set hash-table stats:
-# Load=104/1024=10%, Rehash=0, Collisions=10/133=8%
+# Load=115/1024=11%, Rehash=0, Collisions=9/181=5%
 
 # Pattern-specific Variable Values
 
@@ -227,22 +251,134 @@ LC_IDENTIFICATION = de_AT.UTF-8
 
 # Directories
 
-# . (device 2051, inode 2496670): 9 files, no impossibilities.
+# . (device 2051, inode 2496670): 11 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-# No implicit rules.
+build/%.c.o: %.c
+#  recipe to execute (from 'Makefile', line 36):
+	mkdir -p $(dir $@)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
+build/%.cpp.o: %.cpp
+#  recipe to execute (from 'Makefile', line 41):
+	mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+
+# 2 implicit rules, 0 (0.0%) terminal.
 # Files
+
+build/./src/Chapter_1/1.6/1_6.c.o: src/Chapter_1/1.6/1_6.c src/Chapter_1/1.6/1_6.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+src/Chapter_1/1.6/1_6.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/Chapter_1/1.9/1_9.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/./src/Chapter_1/1.2/1_2.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 20:54:08.889911204
+#  File has been updated.
+#  Successfully updated.
+
+src/Chapter_1/1.1/1_1.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/./src/Chapter_1/1.10/1_10.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 21:54:15.021944107
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/./src/main.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 22:11:24.456322159
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/./src/Chapter_1/1.6/1_6.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 21:19:56.721937667
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-24 13:08:05.892229577
+#  Last modified 2022-07-24 20:37:43.475792113
 #  File has been updated.
 #  Successfully updated.
+
+build/./src/Chapter_1/1.1/1_1.c.o: src/Chapter_1/1.1/1_1.c src/Chapter_1/1.1/1_1.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/./src/helloWorld/helloWorld.c.o: src/helloWorld/helloWorld.c src/helloWorld/helloWorld.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/./src/Chapter_1/1.2/1_2.c.o: src/Chapter_1/1.2/1_2.c src/Chapter_1/1.2/1_2.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	rm -r $(BUILD_DIR)
+
+# Not a target:
+build/./src/Chapter_1/1.1/1_1.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 20:54:08.849911855
+#  File has been updated.
+#  Successfully updated.
+
+build/./src/Chapter_1/1.10/1_10.c.o: src/Chapter_1/1.10/1_10.c src/Chapter_1/1.9/1_9.h src/Chapter_1/1.10/1_10.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/./src/main.c.o: src/main.c src/helloWorld/helloWorld.h src/Chapter_1/1.1/1_1.h src/Chapter_1/1.2/1_2.h src/Chapter_1/1.4/1_4.h src/Chapter_1/1.6/1_6.h src/Chapter_1/1.9/1_9.h src/Chapter_1/1.10/1_10.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/learning_C: build/./src/helloWorld/helloWorld.c.o build/./src/Chapter_1/1.10/1_10.c.o build/./src/Chapter_1/1.1/1_1.c.o build/./src/Chapter_1/1.6/1_6.c.o build/./src/Chapter_1/1.9/1_9.c.o build/./src/Chapter_1/1.2/1_2.c.o build/./src/Chapter_1/1.4/1_4.c.o build/./src/main.c.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 32):
+	$(CC) $(OBJS) -o $@ $(LDFLAGS) -lncurses
 
 # Not a target:
 .DEFAULT:
@@ -257,22 +393,117 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+# Not a target:
+src/Chapter_1/1.4/1_4.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/Chapter_1/1.9/1_9.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/Chapter_1/1.10/1_10.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/./src/helloWorld/helloWorld.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 20:54:08.809912506
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/Chapter_1/1.2/1_2.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/Chapter_1/1.10/1_10.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/helloWorld/helloWorld.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/Chapter_1/1.2/1_2.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/./src/Chapter_1/1.4/1_4.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 20:55:30.4605994
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/Chapter_1/1.1/1_1.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/Chapter_1/1.6/1_6.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/helloWorld/helloWorld.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/./src/Chapter_1/1.9/1_9.c.o: src/Chapter_1/1.9/1_9.c src/Chapter_1/1.9/1_9.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/./src/Chapter_1/1.4/1_4.c.o: src/Chapter_1/1.4/1_4.c src/Chapter_1/1.4/1_4.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/./src/Chapter_1/1.9/1_9.c.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-24 21:50:37.835719353
+#  File has been updated.
+#  Successfully updated.
+
+src/Chapter_1/1.4/1_4.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # files hash-table stats:
-# Load=4/1024=0%, Rehash=0, Collisions=0/14=0%
+# Load=38/1024=4%, Rehash=0, Collisions=4/112=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 115 B / avg = 8 B
-# current buf: size = 8162 B / used = 115 B / count = 14 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 54 / storage = 1083 B / avg = 20 B
+# current buf: size = 8162 B / used = 1083 B / count = 54 / avg = 20 B
 
-# strcache performance: lookups = 18 / hit rate = 22%
+# strcache performance: lookups = 124 / hit rate = 56%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=0/18=0%
-# Finished Make data base on Sun Jul 24 13:08:26 2022
+# Load=54/8192=1%, Rehash=0, Collisions=0/124=0%
+# Finished Make data base on Fri Sep 23 19:44:12 2022
 
  
-make: *** No rule to make target 'all'.  Stop.
-
